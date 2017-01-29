@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="coolio.thecuriousbar.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/addressEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="IP"/>
+        <EditText
+            android:id="@+id/portEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Port"/>
+        <Button
+            android:id="@+id/connectButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Connect"
+            style="@style/Widget.AppCompat.Button.Colored"
+            />
+
+        <TextView
+            android:id="@+id/responseTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/notepad"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/notepad"
+                android:scaleType="fitCenter"
+                android:background="#00000000"/>
+            <ImageButton
+                android:id="@+id/Explorer"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/explorer"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/notepad"
+                android:background="#00000000"/>
+            <ImageButton
+                android:id="@+id/snip"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/snip"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/Explorer"
+                android:background="#00000000"/>
+            <ImageButton
+                android:id="@+id/cmd"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/cmd"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/snip"
+                android:background="#00000000"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/hsv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:fillViewport="true"
+        android:measureAllChildren="false"
+        android:scrollbars="none"
+        android:layout_gravity="center">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Copy"
+                android:textSize="10pt"
+                style="@style/Widget.AppCompat.Button.Colored"/>
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/btn1"
+                android:text="Paste"
+                android:textSize="10pt"
+                style="@style/Widget.AppCompat.Button.Colored"/>
+
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/btn2"
+                android:text="Start"
+                android:textSize="10pt"
+                style="@style/Widget.AppCompat.Button.Colored"/>
+
+            <Button
+                android:id="@+id/btn4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/btn3"
+                android:text="Select All"
+                android:textSize="10pt"
+                style="@style/Widget.AppCompat.Button.Colored"/>
+
+            <Button
+                android:id="@+id/btn5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/btn4"
+                android:text="Undo"
+                android:textSize="10pt"
+                style="@style/Widget.AppCompat.Button.Colored"/>
+
+            <Button
+                android:id="@+id/btn6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/btn5"
+                android:text="Redo"
+                android:textSize="10pt"
+                style="@style/Widget.AppCompat.Button.Colored"/>
+
+        </RelativeLayout>
+    </HorizontalScrollView>
+</RelativeLayout>
