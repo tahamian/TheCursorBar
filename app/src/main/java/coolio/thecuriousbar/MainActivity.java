@@ -16,7 +16,7 @@ import java.io.Console;
 public class MainActivity extends AppCompatActivity {
 
     Button btn1, btn2, btn3, btn4, btn5, btn6, connectButton;
-    ImageButton Notepad, Snip, Explorer, CMD;
+    ImageButton Notepad, Explorer, CMD;
     TextView response;
     EditText editTextAddress, editTextPort;
     Client myClient;
@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
         btn6 = (Button) findViewById(R.id.btn6);
         connectButton = (Button) findViewById(R.id.connectButton);
         Notepad = (ImageButton) findViewById(R.id.notepad);
-        Snip = (ImageButton) findViewById(R.id.snip);
         Explorer = (ImageButton) findViewById(R.id.Explorer);
         CMD = (ImageButton) findViewById(R.id.cmd);
 
@@ -148,17 +147,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        Snip.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                new Thread(new Runnable() {
-                    public void run() {
-                        myClient.WriteToSocket("snip");/Z
-                    }
-                }).start();
 
-            }
-        });
         CMD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

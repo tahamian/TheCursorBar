@@ -18,12 +18,16 @@
             android:id="@+id/addressEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="IP"/>
+            android:hint="IP"
+            />
         <EditText
             android:id="@+id/portEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Port"/>
+            android:hint="Port"
+            android:digits="0123456789."
+            android:inputType="numberDecimal"
+            />
         <Button
             android:id="@+id/connectButton"
             android:layout_width="match_parent"
@@ -45,6 +49,7 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:src="@drawable/notepad"
+                android:layout_marginLeft="23dp"
                 android:scaleType="fitCenter"
                 android:background="#00000000"/>
             <ImageButton
@@ -53,26 +58,18 @@
                 android:layout_height="80dp"
                 android:src="@drawable/explorer"
                 android:scaleType="fitCenter"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="30dp"
                 android:layout_toRightOf="@+id/notepad"
                 android:background="#00000000"/>
-            <ImageButton
-                android:id="@+id/snip"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/snip"
-                android:scaleType="fitCenter"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/Explorer"
-                android:background="#00000000"/>
+
             <ImageButton
                 android:id="@+id/cmd"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:src="@drawable/cmd"
                 android:scaleType="fitCenter"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/snip"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@+id/Explorer"
                 android:background="#00000000"/>
 
         </RelativeLayout>
